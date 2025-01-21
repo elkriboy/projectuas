@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(52, 49, 49, 0.9);
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.left {
+    flex: 1;
+    background: url('./image/meru.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.right {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #451a03;
+}
+
+.register-form {
+    width: 100%;
+}
+
+.register-form h2 {
+    margin-bottom: 20px;
+    color: rgb(248, 245, 245); /* Warna emas */
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(248, 245, 245); /* Warna emas */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid  rgb(248, 245, 245);
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    background-color:#451a03; /* Samakan dengan latar belakang */
+    color: #ecf0f1; /* Warna teks input */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(248, 245, 245); /* Gradasi warna emas */
+    border: none;
+    border-radius: 5px;
+    color: rgb(52, 49, 49); /* Warna teks */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: rgb(133, 126, 126); /* Gradasi warna emas terbalik */
+}
+
+.login-link {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(248, 245, 245); /* Warna emas */
+}
+
+.login-link a {
+    color: rgb(238, 223, 122); /* Warna emas */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-link a:hover {
+    color: rgb(102, 67, 24); /* Warna emas lebih gelap */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

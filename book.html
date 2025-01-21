@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <header>
+        <nav class="w-full flex justify-between items-center p-6 bg-[#451a03] text-white">
+            <div class="text-2xl font-bold" style="font-family: Merriweather, serif;">
+                Grand Aveline
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a class="hover:text-[#fcd34d]" href="home.php">Home</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="home.php#about">About</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="login.html">Login</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="room.php">Rooms</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="book.html">Book</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="home.php#facilities">Facilities</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="contactdesain.php">Contact us</a></li>
+            </ul>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#451a03] text-white p-6">
+            <ul class="space-y-4">
+                <li><a class="hover:text-[#fcd34d]" href="home.php">Home</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="home.php#about">About</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="login.html">Login</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="room.php">Rooms</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="book.html">Book</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="home.php#facilities">Facilities</a></li>
+                <li><a class="hover:text-[#fcd34d]" href="contactdesain.php">Contact us</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Booking Form Section -->
+    <main class="flex-grow flex items-center justify-center p-4" data-aos="fade-up">
+        <div class="container mx-auto p-6 max-w-2xl">
+            <div class="bg-[#451a03] p-8 rounded-2xl shadow-2xl flex flex-col bg-opacity-90">
+                <!-- Form Title -->
+                <div class="mb-8 text-center">
+                    <h1 class="text-4xl font-bold mb-4 text-white" style="font-family: Raleway, serif;">Hotel Booking Form</h1>
+                    <p class="text-white mb-6 leading-relaxed">
+                        Please fill out the form to book your stay at our hotel.
+                    </p>
+                </div>
+    
+                <!-- Booking Form -->
+                <form class="flex flex-col space-y-4" action="book.php" method="POST" enctype="multipart/form-data" data-aos="zoom-in">
+                    <!-- Check-in Date -->
+                    <div>
+                        <label for="checkin" class="block text-white font-semibold mb-2">Check-in Date</label>
+                        <input type="date" id="checkin" name="checkin" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                
+                    <!-- Check-out Date -->
+                    <div>
+                        <label for="checkout" class="block text-white font-semibold mb-2">Check-out Date</label>
+                        <input type="date" id="checkout" name="checkout" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                
+                    <!-- Room Type -->
+                    <div>
+                        <label for="room" class="block text-white font-semibold mb-2">Room Type</label>
+                        <select id="room" name="room" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="700000" data-room-id="RM1">Standard Room - Rp 700,000</option>
+                            <option value="1500000" data-room-id="RM2">Superior Room - Rp 1,500,000</option>
+                            <option value="2300000" data-room-id="RM3">Suite Room - Rp 2,300,000</option>
+                            <option value="1300000" data-room-id="RM4">Deluxe Room - Rp 1,300,000</option>
+                            <option value="1800000" data-room-id="RM5">Family Room - Rp 1,800,000</option>
+                            <option value="1700000" data-room-id="RM6">Executive Room - Rp 1,700,000</option>
+                            <option value="1700000" data-room-id="RM7">View Room - Rp 1,700,000</option>
+                            <option value="2500000" data-room-id="RM8">Honeymoon Room - Rp 2,500,000</option>
+                        </select>
+                    </div>
+                
+                    <!-- Number of Rooms -->
+                    <div>
+                        <label for="num-rooms" class="block text-white font-semibold mb-2">Number of Rooms</label>
+                        <input type="number" id="num-rooms" name="num_rooms" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" min="1" value="1">
+                    </div>
+                
+                    <!-- Total Price -->
+                    <div>
+                        <label for="total-price" class="block text-white font-semibold mb-2">Total Price</label>
+                        <input type="text" id="total-price" name="total_price" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+                    </div>
+                
+                    <!-- Submit Button -->
+                    <div class="flex justify-center">
+                        <button type="submit" class="bg-[#9a3412] text-white px-6 py-3 rounded-lg hover:bg-[#ea580c] transition duration-300 shadow-md self-center">
+                            Book Now
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        AOS.init();
+
+        function calculatePrice() {
+            var roomSelect = document.getElementById('room');
+            var roomPrice = parseInt(roomSelect.value);
+            var roomId = roomSelect.options[roomSelect.selectedIndex].getAttribute('data-room-id');
+            var numRooms = parseInt(document.getElementById('num-rooms').value);
+            var totalPriceField = document.getElementById('total-price');
+
+            if (roomPrice > 0 && numRooms > 0) {
+                // Calculate total price based on room price and number of rooms
+                var totalPrice = roomPrice * numRooms;
+                totalPriceField.value = "IDR " + totalPrice.toLocaleString();
+            } else {
+                totalPriceField.value = "";
+            }
+             // Set hidden input for room ID
+             var roomIdInput = document.querySelector('input[name="room_id"]');
+            if (!roomIdInput) {
+                roomIdInput = document.createElement('input');
+                roomIdInput.type = 'hidden';
+                roomIdInput.name = 'room_id';
+                document.querySelector('form').appendChild(roomIdInput);
+            }
+            roomIdInput.value = roomId;
+        }
+
+        // Add event listeners to update total price automatically
+        document.getElementById('room').addEventListener('input', calculatePrice);
+        document.getElementById('num-rooms').addEventListener('input', calculatePrice);
+
+        // Toggle mobile menu
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
